@@ -1,4 +1,4 @@
-﻿namespace LeetCodeLib.Dungeon;
+﻿namespace LeetCodeLib._0174_DungeonGame;
 
 public class Solution
 {
