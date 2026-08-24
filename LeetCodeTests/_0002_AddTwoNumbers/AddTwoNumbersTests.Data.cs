@@ -1,5 +1,4 @@
 using LeetCodeLib._0002_AddTwoNumbers;
-using Xunit;
 
 namespace LeetCodeTests.AddTwoNumbers;
 
