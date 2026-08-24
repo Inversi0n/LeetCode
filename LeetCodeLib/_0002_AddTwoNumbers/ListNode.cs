@@ -1,7 +1,6 @@
-﻿
-using System.Text;
+﻿using System.Text;
 
-namespace LeetCodeLib.AddTwoNumbers;
+namespace LeetCodeLib._0002_AddTwoNumbers;
 public class ListNode : IEquatable<ListNode>, IEquatable<int>
 {
     public int val;

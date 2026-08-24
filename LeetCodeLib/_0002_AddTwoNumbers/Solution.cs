@@ -1,4 +1,4 @@
-﻿namespace LeetCodeLib.AddTwoNumbers;
+﻿namespace LeetCodeLib._0002_AddTwoNumbers;
 
 public class Solution
 {
