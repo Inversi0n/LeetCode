@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="LeetCodeConsole/LeetCodeConsole.csproj" Id="32bd85e9-1b2b-482a-a053-f651381a7221" />
   <Project Path="LeetCodeLib/LeetCodeLib.csproj" />
   <Project Path="LeetCodeTests/LeetCodeTests.csproj" />
