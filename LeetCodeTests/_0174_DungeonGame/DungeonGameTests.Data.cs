@@ -1,12 +1,10 @@
-﻿using LeetCodeLib.Dungeon;
+﻿
+namespace LeetCodeTests._0174_DungeonGame;
 
-namespace LeetCodeTests;
-
-public class DungeonTests
+public partial class DungeonGameTests
 {
-    public static IEnumerable<object[]> DungeonCases()
+    public static TheoryData<int[][], int> DangeonGameData => new()
     {
-        yield return new object[]
         {
             new int[][]
             {
@@ -15,26 +13,32 @@ public class DungeonTests
                 new[] {10, 30, -5}
             },
             7
-        };
-
-        yield return new object[]
+        },
         {
-            new int[][]
+             new int[][]
             {
                 new[] {1,-3,3},
                 new[] {0,-2,0},
                 new[] { -3, -3, -3 }
             },
             3
-        };
+        },
 
-        yield return new object[]
+        {
+             new int[][]
+            {
+                new[] {1,2,1},
+                new[] {-2,-3,-3},
+                new[] { 3, 2, -2 }
+            },
+            1
+        },
+
         {
             new int[][] { new[] {0} },
             1
-        };
+        },
 
-        yield return new object[]
         {
             new int[][]
             {
@@ -42,10 +46,19 @@ public class DungeonTests
                 new[] {1},
             },
             1
-        };
+        },
 
-        yield return new object[]
         {
+             new int[][]
+            {
+                new[] {1,-3,3},
+                new[] {0,-2,0},
+                new[] { -3, -3, -3 }
+            },
+            3
+        },
+
+          {
             new int[][]
             {
                 new[] {19,14,-25,-20,-36},
@@ -54,10 +67,9 @@ public class DungeonTests
                 new[] {-12,1,-70,44,-98},
             },
             115
-        };
+        },
 
-        yield return new object[]
-        {
+            {
             new int[][]
             {
                 new[] {-5, 27},
@@ -90,20 +102,7 @@ public class DungeonTests
                 new[] {11,-39},
                 new[] {12,1},
             },
-            115
-        };
-    }
-
-    //[InlineData(new int[][] { { 2 }, { 1} }, 1)]
-    //[InlineData(new[][] { [-2, -3, 3], [-5, -10, 1], [10, 30, -5] }, 7)]
-    //[InlineData(new[][] { [0] }, 1)]
-    [Theory]
-    [MemberData(nameof(DungeonCases))]
-    public void DungeonTest(int[][] input, int expected)
-    {
-        var dung = new Dungeons();
-
-        var result = dung.CalculateMinimumHP(input);
-        Assert.Equal(expected, result);
-    }
+            576
+        },
+    };
 }
