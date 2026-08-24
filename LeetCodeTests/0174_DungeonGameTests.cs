@@ -2,7 +2,7 @@
 
 namespace LeetCodeTests;
 
-public class DungeonTests
+public class DungeonGameTests
 {
     public static IEnumerable<object[]> DungeonCases()
     {
@@ -26,6 +26,17 @@ public class DungeonTests
                 new[] { -3, -3, -3 }
             },
             3
+        };
+
+        yield return new object[]
+        {
+            new int[][]
+            {
+                new[] {1,2,1},
+                new[] {-2,-3,-3},
+                new[] { 3, 2, -2 }
+            },
+            1
         };
 
         yield return new object[]
@@ -90,7 +101,7 @@ public class DungeonTests
                 new[] {11,-39},
                 new[] {12,1},
             },
-            115
+            576
         };
     }
 
@@ -101,7 +112,7 @@ public class DungeonTests
     [MemberData(nameof(DungeonCases))]
     public void DungeonTest(int[][] input, int expected)
     {
-        var dung = new Dungeons();
+        var dung = new Solution();
 
         var result = dung.CalculateMinimumHP(input);
         Assert.Equal(expected, result);
